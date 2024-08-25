@@ -5,12 +5,12 @@ Steps:
 1. create observer and observable interface
    observable will have add observer, remove observer and notify observer methods
    observer will have update method that will take object of the observable concrete class(product)
+
 2. create concrete class for the observer and observables, implement method make proper constructor.
    Observable concrete class have a list of observer which it updates in the add and remove method
    and in notifyAll method it invokes update method of the observer.
    it also has a boolean for state management.
-
-   in the observer concrete class the update method is used to send notification to the user.
+   In the observer concrete class the update method is used to send notification to the user.
 
 3. In the main class make desired object of observer and observable concrete class object and add the
    observer to the observable so when there is a change in observable state it will send the notification
