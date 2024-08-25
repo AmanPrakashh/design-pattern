@@ -1,0 +1,14 @@
+We need to decorate the base class, to do so steps written below;
+
+1. create a baseInterface.
+2. create an implementation class of base interface have basic functionalities.
+3. create a base decorator and do constructor injection of base interface, HAS-A relationship
+   and the function should point to the base class function(See baseDecorator class)
+4. now create decorator classes extending baseDecorator as many as you can,
+    in the decorator class the constructor have to have the baseInterface object
+    for calling parent class constructor(as parent class do not have any default constructor)
+5. now decorator are available to be used.
+   for only basic capability use baseDecoratorObject which takes concreteClass object in constructor
+   or directly use ConcreteClass object
+6. for further decoration use decoratorClass object which takes baseClass object or
+   another decorator class object.
