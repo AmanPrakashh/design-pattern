@@ -1,0 +1,18 @@
+The Adapter Design Pattern is a structural design pattern used to enable two incompatible
+interfaces to work together. It acts as a bridge between two objects, allowing a class to
+interface with another class that otherwise would be incompatible due to different
+interfaces. The Adapter pattern wraps an existing class with a new interface to make it
+compatible with a client's expectations.
+
+Key Components:
+Target Interface: The interface that the client expects or interacts with.
+Adaptee: The existing class with an incompatible interface that needs adaptation.
+Adapter: A class that implements the target interface and adapts the behavior of the
+         Adaptee to the expected Target interface.
+Client: The entity that interacts with the Target interface through the Adapter.
+
+Example:
+Let's say we have a MediaPlayer interface that plays audio files.
+We also have an AdvancedMediaPlayer that can play additional
+formats like VLC and MP4. The Adapter will allow the MediaPlayer
+to use the AdvancedMediaPlayer without changing its interface.

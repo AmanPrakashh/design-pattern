@@ -1,0 +1,35 @@
+
+
+
+Client---->Proxy---->Real Object
+
+
+used when caching required
+used for access restrictions
+used for preprocessing and postprocessing
+   >logging
+   >publish event
+   >resolving resource intensive task
+Reduces complexity: simplifies interaction with complex or resource intensive
+                    object by providing simple interface.
+Encapsulation: It encapsulates the complexity of accessing the real object by
+               providing a cleaner and more maintainable code.
+
+Types:
+1. Virtual Proxy: Control access to a resource intensive object by creating it
+                  only when its actually needed(lazy loading).
+2. Remote Proxy: Represent an object that exists in different address space, Manages
+                 communication between remote and client and object.
+3. Protection proxy : control access to the real object by checking the permission of
+                      the client before allowing the client to use it.
+4. Smart Proxy: adds additional action to the object, such as referencing, counting,
+                logging, preprocessing, postProcessing etc.
+
+
+====================================================================================================================
+components:
+1. Subject(Interface)
+2. RealObject(will be implementing subject (is-a))
+3. ProxyObject(will be implementing subject (is-a) and will have a RealObject(has-a) and
+   will be rendering the real object to client passing through the proxy)
+4. Client should only be able to call the proxyObject.
